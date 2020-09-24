@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula_senai04</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #quadrado{
+            height: 100px;
+            width: 100px;
+            background-color: #000;
+            position :absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="quadrado"  onclick="mover()"></div>
+    <script>
+        const colors = ['#1979e6','#b85647','#a8c33c','#3500ff','#dbc124']
+
+        function ola(){
+            let mouse = document.querySelector('div');
+            mouse.style.background = 'blue';
+        }
+        function tchau(){
+            let mouse = document.querySelector('div');
+            mouse.style.background = '#000';
+        }
+
+
+        function mover(){
+            let quadrado = document.querySelector('div');
+            
+            const cor = colors[Math.floor(Math.random() * colors.length)];
+            quadrado.style.animation = '1s';
+            quadrado.style.background = cor;
+            quadrado.style.top = Math.random() * 250 + 'px';
+            quadrado.style.left = Math.random() *250 + 'px';
+            quadrado.style.bottom = Math.random() * 250 + 'px';
+            quadrado.style.right = Math.random() *250 + 'px';
+        }
+
+    </script>
+</body>
+</html>
