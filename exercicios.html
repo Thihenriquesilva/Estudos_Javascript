@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>")
+            document.write("<br>")
+        }
+        var num1 = 25, num2 = 30, num3 = 46;
+        var media = (num1 + num2 + num3)/3
+        console.log(media)
+        document.write(media)
+        pulaLinha();
+        console.log(num2/num1)
+        document.write(num2/num1)
+        pulaLinha();
+        var produtos = ["Amaciante","Alcool","Desinfetante","Sabão em Pó","Candida"]
+        console.log(produtos)
+        document.write(produtos)
+        pulaLinha()
+        document.write(produtos[1,2,3])
+        pulaLinha()
+        //forma 1 de criar objeto
+        var pessoa = new Object();
+        pessoa.nomeCompleto = "Thiago Henrique da Silva"
+        pessoa.idade = 21
+        pessoa.nacionalidade = "Brasileira"
+        pulaLinha()
+        // forma 2 de criar objeto
+        var carro = {
+            modelo:"mustang",
+            ano: 1998
+        }
+        console.log(pessoa);
+        document.write(pessoa.nomeCompleto +";"+pessoa.idade +";"+ pessoa.nacionalidade +";"+pessoa.cor)
+        console.log(carro)
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+JavaScript
+
+Aula 01
+	alert(): uma das mais simples caixas de diálogo,
+	com uma aparência simples e intuitiva elas são muito usadas
+	em validações de formulários e/ou bloqueio de ações do browser
+
+	confirm(): diferente do alert, ela exibi dois botões, um OK(Verdadeiro) 
+	e outro Cancelar(Falso), utilizadas com estruturas condicionais, como
+	confirmação de alteração/exclusão de algum registro do BD.
+
+	prompt():diferente do alert() e do confirm(), pois ele necessita que 
+	o usuário insira algum valor, ou seja, precisa de uma interação direta 
+	do usuário para que ele funcione.Por padrão é uma string();
+
+	tipos primitivos
+
+	escopos: globais e locais
+	
+	funções: como, pra que e como usar;
+	funções pré-definidas;
+
+
+Estruturas de Repetição
+
+//Se/Senão(if/else)
+
+se(condicao){
+    //bloco de código
+}
+senao{
+	//bloco de código
+}
+
+//Exemplo JavaScript
+
+function chovendo(chuva){
+var r;    
+
+if(chuva == "s")
+    {
+      r="Corre"  
+    }
+else{
+
+    r="Tranquilo"
+    }
+
+console.log(r)
+}
+
+*******************************************
+
+function maiorIdade(idade)
+{   
+    let result;
+    if(idade >= 18)
+    {
+       result = "Você pode comprar" 
+    }
+    else
+    {    
+        result = "Você não possui idade suficiente"
+    }
+    
+}
+
+********************************************
+
+transform: translate(-50%, -50%)

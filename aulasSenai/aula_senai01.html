@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula-SENAI_01</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <!-- <br><br>
+    <input type="button" onclick="funcao1()" value="Exibir alert"> -->
+    <p id="demo"></p>
+    <button onclick="funcao4()">Clique em mim</button>
+    <!-- <input type="button" onclick="funcao2()" value="Exibir confirm"> -->
+
+    <!-- <p>Clique para exibir.</p>
+    <button onclick="funcao3()">Clique aqui</button> -->
+
+</body>
+<script>
+    //Utilizando o alert + function com ação "onclick"
+    // window.alert("Olá, Mundo!");
+    // function funcao1()
+    // {
+    //     alert("Eu sou um alert!");
+    // }
+
+    //Utilizando o confirm()  function
+    // function funcao2()
+    // {
+    //     var x;
+    //     var r = confirm("Escolha um valor!")
+    //     if(r)
+    //     {
+    //         x="Você pressionou OK!"
+    //     }
+    //     else
+    //     {
+    //         x="Você pressionou Cancelar!"
+    //     }
+    //     document.getElementById("demo").innerHTML = x
+    // }
+
+    //Utilizando o prompt() + function()
+    // var x;
+    // function funcao3()
+    // {
+    //     var idade = prompt("Digite sua idade")
+
+    //     if(idade != null)
+    //     {
+    //         x="Idade: " + idade + " anos."
+    //         document.getElementById("demo").innerHTML = x
+    //     }
+    // }
+
+    // var y=7;
+    // function funcao4() {
+    //     y = null;
+    //     if(y === undefined)
+    //     {   
+            
+    //         document.getElementById("demo").innerHTML = "Variável não inicializada" ; 
+    //         document.getElementById("demo").style.color ="#ff0000";
+    //     }
+    //     else
+    //     {
+    //         document.getElementById("demo").innerHTML = "Variável inicializada com o valor " + y ; 
+    //         document.getElementById("demo").style.color ="#80ff00";
+    //     }
+    // }
+
+    function minhaFuncao(objeto)
+    {
+        objeto.make = "Toyota";
+    }
+    var meuCarro = {make: "Honda", model: "Accord", year: 1996};
+
+    var x,y;
+
+    x = meuCarro.make;
+
+    minhaFuncao(meuCarro);
+    y = meuCarro.make;
+
+</script>
+
+</html>

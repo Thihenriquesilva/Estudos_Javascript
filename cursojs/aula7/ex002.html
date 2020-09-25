@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
+    <div id="testeUm">Adicione um texto Aqui</div>
+    <div class="testeDois">
+        <input type="text" placeholder="digite qualquer coisa">
+        <input type="text" placeholder="digite alguma coisa">
+    </div>
+    <br>
+    <div class="testeTres">
+        faz o urro
+    </div>
+    <script>
+        //Métodos de Acesso a elementos
+        //Marca:[]usado quando estver no plural
+        var p1 = document.getElementsByTagName('p')[1]
+        //window.document.write(p1.innerHTML)
+        p1.style.color = '#16a085'
+        //var corpo = document.getElementsByTagName('body')
+        var corpo = window.document.body
+        corpo.style.background = 'violet'
+
+        //ID
+        var divId = document.getElementById('testeUm')
+        divId.style.background = 'black'
+        divId.style.margin = '50px'
+        divId.innerText = 'Sou um texto dentro de uma div'
+        //alert(divId.innerHTML)
+
+        //Seletor CSS
+        var divClass = document.querySelector('.testeDois')
+        divClass.style.margin = '20px'
+        divClass.style.background = 'whitesmoke'
+        //alert(divClass.innerText)
+
+        //Class
+        console.log(
+            document.getElementsByClassName('testeDois')[0]
+        )
+        var testeClass = document.getElementsByClassName('testeTres')[0]
+        document.write(testeClass.innerHTML)
+
+        //document.write = propriedade inline
+    </script>
+</body>
+</html>
