@@ -65,11 +65,15 @@
 
     }
     function teste(){
-            document.getElementById('hr').innerHTML = "00:";
-            document.getElementById('min').innerHTML = "00:";
-            document.getElementById('sec').innerHTML = "00";
+            h = 0;
+            m = 0;
+            s = 1;
+            document.getElementById('hr').innerHTML = h + ':';
+            document.getElementById('min').innerHTML = m + ':';
+            document.getElementById('sec').innerHTML = s;
         }
     function reseta(){
+        
         var myTimer = setInterval(teste(),3000);
         clearInterval(myTimer);
         myTimer =setInterval(teste(),3000); 
