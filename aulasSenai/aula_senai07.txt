@@ -9,6 +9,10 @@ find();
 
 arrow functions
 https://medium.com/@raphalima8/arrow-functions-declara%C3%A7%C3%A3o-funcionamento-escopos-e-o-valor-de-this-9cb6449bca31
+
+IMPORTANTE!!!
+ HTML 5 File API
+ https://codigosimples.net/2016/04/25/ler-um-arquivo-local-usando-html5-e-javascript/
 /*************************/
 
 projetin procurar nomes que possuam  o mesmo número de caracteres
