@@ -3,54 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula-SENAI_04</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Aula_Senai04</title>
 </head>
 <body>
-    <h1>Formulário</h1>
-    <br>
-    <br>
-    <!--Action: define o local em que os dados recolhidos do formulário devem ser enviados-->
-    <!--Method: define qual o método HTTP para enviar os dados (GET ou POST)-->
-    <form>
-        <!--Input: campo básico de texto de linha única-->
-        <!--Textarea: campo de entrada de texto de várias linhas-->
-        <div>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" >
-        </div>
-        <div>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email">
-        </div>
-        <div>
-            <label for="msg">Mensagem:</label>
-            <textarea  id="msg" ></textarea>
-        </div>
-        <div class="btn">
-            <button type="submit" onclick="enviar()">Enviar sua mensagem</button>
-            <button type="reset">Resetar</button>
-        </div>
-    </form>
-    <hr>
-    <br>
-    <h1>Exibir resultados</h1>
-    <div>
-        <p id="nome_saida"></p>
-        <p id="email_saida"></p>
-        <p id="msg_saida"></p>
+    <h1>Entendo o DOM (Document Object Model)</h1>
+    <div class="container">
+        <h1 id="timer"><span id="hr">00:</span><span id="min">00:</span><span id="sec">00</span></h1>
+        <button id="start" onclick="starta()">Start</button>
+        <button id="stop" onclick="stopa()">Stop</button>
+        <button id="reset" onclick="reseta()">Reset</button>
     </div>
+
+
 </body>
 <script>
-    let enviar = function()
-    {
-        let nome = document.getElementById("nome").value;
-        let email = document.getElementById("email").value;
-        let msg = document.getElementById("msg").value;
+    var h = 0;
+    var m = 0;
+    var s = 1;
+    var time = null;
+    function starta(){
+        if(!time){
+            time = setInterval(()=>{
+                if(s == 60){
+                    m++; s=0;
+                }
+                if (m == 60) 
+                { 
+                    h++; s = 0; m = 0;
+                }
+                if(h < 10)
+                {
+                    document.getElementById('hr').innerHTML = '0' + h + ':'}
+                else
+                {
+                    document.getElementById("hr").innerHTML = h + ":";
+                }
+                if (s < 10)
+                {
+                    document.getElementById("sec").innerHTML = "0" + s;
+                }  
+                else
+                {
+                document.getElementById("sec").innerHTML = s ;
+                }
+                if (m < 10)
+                {
+                    document.getElementById("min").innerHTML = "0" + m + ":";  
+                }  
+                else
+                { 
+                    document.getElementById("min").innerHTML = m + ":";
+                }	
+                s++
+            },1000);
+        }
+    }
 
-        document.getElementById("nome_saida").innerHTML = nome;
-        document.getElementById("email_saida").innerHTML = email;
-        document.getElementById("msg_saida").innerHTML = msg;
+    function stopa(){
+        clearInterval(time);
+        time = null;
+
+    }
+    function teste(){
+            h = 0;
+            m = 0;
+            s = 1;
+            document.getElementById('hr').innerHTML = h + ':';
+            document.getElementById('min').innerHTML = m + ':';
+            document.getElementById('sec').innerHTML = s;
+        }
+    function reseta(){
+        
+        var myTimer = setInterval(teste(),3000);
+        clearInterval(myTimer);
+        myTimer =setInterval(teste(),3000); 
+
     }
 </script>
 </html>

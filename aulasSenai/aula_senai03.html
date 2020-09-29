@@ -3,43 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula-SENAI_03</title>
+    <title>Aula-SENAI_04</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" id="demo">
-    <input type="button" onclick="funcao1()" value="Clique aqui">
-    <br><br>
-    <p>Digite um número</p>
-    <input type="number" id="demoTwo">
-    <input type="button" onclick="number()" value="Clique aqui">
-    <p>O resultado é: </p>
-    <!-- <input type="text"  id="exibido"> -->
-    <output id="exibido"></output>
-    <br><br>
-    <output id="nossoExibido"></output>
-    <br><br>
-    <button onclick="funcao2()">Click me</button>
+    <h1>Formulário</h1>
+    <br>
+    <br>
+    <!--Action: define o local em que os dados recolhidos do formulário devem ser enviados-->
+    <!--Method: define qual o método HTTP para enviar os dados (GET ou POST)-->
+    <form>
+        <!--Input: campo básico de texto de linha única-->
+        <!--Textarea: campo de entrada de texto de várias linhas-->
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" >
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email">
+        </div>
+        <div>
+            <label for="msg">Mensagem:</label>
+            <textarea  id="msg" ></textarea>
+        </div>
+        <div class="btn">
+            <button type="submit" onclick="enviar()">Enviar sua mensagem</button>
+            <button type="reset">Resetar</button>
+        </div>
+    </form>
+    <hr>
+    <br>
+    <h1>Exibir resultados</h1>
+    <div>
+        <p id="nome_saida"></p>
+        <p id="email_saida"></p>
+        <p id="msg_saida"></p>
+    </div>
 </body>
 <script>
-    function funcao1(){
-        //Obs caso o ponto value seja retirado
-        //pode causar o erro: [object HTMLInputElement]
-        let nome = document.getElementById("demo").value;
-        alert("Olá "+ nome);
-    }
-
-    var number = function()
+    let enviar = function()
     {
-        let num = document.getElementById("demoTwo").value;
-        let convert = parseInt(num)
-        document.getElementById("exibido").innerHTML = num + " seu tipo é " + typeof num;
-        document.getElementById("nossoExibido").innerHTML = convert + " seu tipo é " + typeof convert;
-    }
+        let nome = document.getElementById("nome").value;
+        let email = document.getElementById("email").value;
+        let msg = document.getElementById("msg").value;
 
-    function funcao2()
-    {
-        funcao1();
-        number();
+        document.getElementById("nome_saida").innerHTML = nome;
+        document.getElementById("email_saida").innerHTML = email;
+        document.getElementById("msg_saida").innerHTML = msg;
     }
 </script>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula-SENAI_03</title>
+</head>
+<body>
+    <input type="text" id="demo">
+    <input type="button" onclick="funcao1()" value="Clique aqui">
+    <br><br>
+    <p>Digite um número</p>
+    <input type="number" id="demoTwo">
+    <input type="button" onclick="number()" value="Clique aqui">
+    <p>O resultado é: </p>
+    <!-- <input type="text"  id="exibido"> -->
+    <output id="exibido"></output>
+    <br><br>
+    <output id="nossoExibido"></output>
+    <br><br>
+    <button onclick="funcao2()">Click me</button>
+</body>
+<script>
+    function funcao1(){
+        //Obs caso o ponto value seja retirado
+        //pode causar o erro: [object HTMLInputElement]
+        let nome = document.getElementById("demo").value;
+        alert("Olá "+ nome);
+    }
+
+    var number = function()
+    {
+        let num = document.getElementById("demoTwo").value;
+        let convert = parseInt(num)
+        document.getElementById("exibido").innerHTML = num + " seu tipo é " + typeof num;
+        document.getElementById("nossoExibido").innerHTML = convert + " seu tipo é " + typeof convert;
+    }
+
+    function funcao2()
+    {
+        funcao1();
+        number();
+    }
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio JS - PetShop</title>
+</head>
+<body>
+    <!--CAMPOS
+    NomePet;NomeDono;Raça;Idade;Cor;Porte;Peso(massa);TipoPet(bool(cachorro/gato))
+    Sexo;Descricao(informações adicionais)-->
+    <header>
+        <h1>Desafio JS - PetShop</h1>
+    </header>
+    <main>
+        <form id="Formulario">
+            <label>Nome do pet</label>
+            <input type="text" name="nomePet" id="NomePet">
+            <br />
+            <label>Nome do dono(a)</label>
+            <input type="text" name="nomeDono" id="NomeDono">
+            <br />
+            <label>Raça</label>
+            <input type="text" name="raca" id="Raca">
+            <br />
+            <label>Idade</label>
+            <input type="text" name="idade" id="Idade">
+            <br />
+            <label>Cor</label>
+            <input type="text" name="cor" id="Cor">
+            <br />
+            <label>Porte</label>
+            <input type="text" name="porte" id="Porte">
+            <br />
+            <label>Massa(peso)</label>
+            <input type="text" name="massa" id="Massa">
+            <br /> 
+            <label>Tipo do pet</label>
+            <br />
+            <input type="radio" name="tipoPet" id="Tipo1" value="cachorro">
+            <label for="Tipo1">Cachorro</label>
+            <input type="radio" name="tipoPet" id="Tipo2" value="gato">
+            <label for="Tipo2">Gato</label>
+            <br />
+            <label>Sexo</label>
+            <br />
+            <input type="radio" name="sexo" id="Sexo1" value="femea">
+            <label for="Sexo1">Fêmea</label>
+            <input type="radio" name="sexo" id="Sexo2" value="macho">
+            <label for="Sexo2">Macho</label>
+            <br />
+            <label>Descrição</label>
+            <br />
+            <textarea placeholder="Escreva aqui a descrição" id="Descricao"></textarea>
+            <br />
+        </form>
+        <input type="submit" onclick="save()" value="Salvar">
+        <input type="button" onclick="lista()" value="Listar">
+        <br />
+        <hr>
+        <table>
+            <caption>PetShop</caption>
+            <thead>
+                <th>Nome do Pet</th>
+                <th>Nome do dono(a)</th>
+                <th>Raça</th>
+                <th>Idade</th>
+                <th>Cor</th>
+                <th>Porte</th>
+                <th>Massa(peso)</th>
+                <th>Tipo do pet</th>
+                <th>Sexo</th>
+                <th>Descrição</th>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

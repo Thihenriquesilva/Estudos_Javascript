@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Aula_Senai06</title>
+</head>
+<body>
+    <div id="manipula">Eu sou a frase do exemplo. Serei alterada quando você clicar.</div>
+    <hr>
+    <h2>Altere a frase acima clicando nos botões</h2>
+    <button onclick="voltarCor()">Muda cor da fonte </button>
+    <input type="button" id="tamanho" value="Muda tamanho da fonte" onclick="mudaTamanhoFonte()"/>
+    <input type="button" id="bg" value="Muda background" onclick="mudaBackground()"/>
+    <br><br>
+    <input type="button" id="pizza" value="Deixa em italico" onclick="mudaItalico()"/>
+    <input type="button" id="colocaBorda" value="Coloca borda" onclick="colocaBorder()"/>
+    <input type="button" id="corBorda" value="Muda a cor da borda" onclick="corBorder()"/>
+    <br><br>
+    <input type="button" id="tiraBorda" value="Exclui borda" onclick="excluiBorder()"/>
+    <input type="button" id="escode" value="Esconde a div" onclick="escondeDiv()"/>
+    <input type="button" id="achou" value="Reaparece com a div" onclick="reapareceDiv()"/>
+
+    <script>
+        // function mudaCor() {
+        // document.getElementById("manipula").style.color = "#ffffff";
+        // }
+
+        var troca;
+        function voltarCor(){
+            if(!troca){
+                document.getElementById('manipula').style.color = "#fff";
+                document.querySelector('button').innerText = "Voltar cor da fonte";
+                troca = true;
+                return troca
+            }
+            else{
+                document.getElementById('manipula').style.color = "#f9ca24";
+                document.querySelector('button').innerText = "Mudar cor da fonte";
+                troca = false;
+                return troca;
+            }
+        }
+        
+        // function mudaTamanhoFonte() {
+        // document.getElementById("manipula").style.fontSize = "20pt";
+        // }
+        var trocaDois;
+        function mudaTamanhoFonte(){
+            if(!trocaDois){
+                document.getElementById('manipula').style.fontSize = "20pt";
+                document.getElementById('tamanho').innerText = "Voltar tamanho da fonte";
+                trocaDois = true;
+                return trocaDois
+            }
+            else{
+                document.getElementById('manipula').style.fontSize = "10pt";
+                document.getElementById('tamanho').innerText = "Mudar tamanho da fonte";
+                trocaDois = false;
+                return trocaDois;
+            }
+            
+        }
+        // function mudaBackground() {
+        // document.getElementById("manipula").style.backgroundColor = "green";
+        // }
+        var trocaTres;
+        function mudaBackground(){
+            if(!trocaTres){
+                document.getElementById('manipula').style.background = "#6ab04c";
+                //document.getElementById('tamanho').innerText = "Voltar background da fonte";
+                trocaTres = true;
+                return trocaTres;
+            }
+            else{
+                document.getElementById('manipula').style.background = "#eb4d4b";
+                trocaTres = false;
+                return trocaTres;
+            }
+        }
+        
+        // function mudaItalico() {
+        // document.getElementById("manipula").style.fontStyle = "italic";
+        // }
+        var trocaQuatro;
+        function mudaItalico(){
+            if(!trocaQuatro){
+                document.getElementById('manipula').style.fontStyle = "italic"
+                document.getElementById('pizza').value = 'Normalizar'
+                trocaQuatro = true;
+                return trocaQuatro;
+            }
+            else{
+                document.getElementById('manipula').style.fontStyle = 'normal';
+                document.getElementById('pizza').value = 'Deixar em italico'
+                trocaQuatro = false;
+                return trocaQuatro;
+            }
+        }
+
+        function escondeDiv() {
+        document.getElementById("manipula").style.display = "none";
+        }
+        
+        function reapareceDiv() {
+        document.getElementById("manipula").style.display = "block";
+        }
+
+        
+        function colocaBorder() {
+        document.getElementById("manipula").style.border = "4px solid #22a6b3";
+        }
+
+        function corBorder() {
+            const colors = ['#1979e6','#b85647','#a8c33c','#3500ff','#dbc124']
+            const cor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById("manipula").style.borderColor = cor;
+        }
+
+        function excluiBorder() {
+        document.getElementById("manipula").style.border = "0px";
+        }
+    </script>
+</body>
+</html>

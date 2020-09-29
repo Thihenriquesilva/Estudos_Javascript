@@ -3,81 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula_Senai04</title>
+    <title>Pet Shop</title>
 </head>
 <body>
-    <h1>Entendo o DOM (Document Object Model)</h1>
-    <div class="container">
-        <h1 id="timer"><span id="hr">00:</span><span id="min">00:</span><span id="sec">00</span></h1>
-        <button id="start" onclick="starta()">Start</button>
-        <button id="stop" onclick="stopa()">Stop</button>
-        <button id="reset" onclick="reseta()">Reset</button>
-    </div>
-
-
+    <header>
+        <h1>Desafio Js - PetShop</h1>
+    </header>
+    <main>
+        <form id="form">
+            <label >Nome do pet</label>
+            <input type="text" name="nomePet" id="nomePet">
+            <br>
+            <label>Nome do dono(a)</label>
+            <input type="text" name="nomeDono" id="nomeDono">
+            <br>
+            <label>Raça</label>
+            <input type="text" name="raca" id="raca">
+            <br>
+            <label>Idade</label>
+            <input type="text" name="idadePet" id="idadePet">
+            <br>
+            <label>Cor</label>
+            <input type="text" name="corPet" id="corPet">
+            <br>
+            <label>Porte</label>
+            <input type="text" name="portePet" id="portePet">
+            <br>
+            <label>Massa(Kg)</label>
+            <input type="text" name="kgPet" id="kgPet">
+            <br>
+            <label>Tipo de Pet</label>
+            <br>
+            <input type="radio" name="sexo" id="tipo1" value="dog">
+            <label for="tipo1">Cachorro</label>
+            <br>
+            <input type="radio" name="sexo" id="tipo2" value="cat">
+            <label for="tipo2">Gato</label>
+            <br>
+            <label>Sexo</label>
+            <br>
+            <input type="radio" name="sexo" id="sexo1" value="feminino">
+            <label for="sexo1">Feminino</label>
+            <br>
+            <input type="radio" name="sexo" id="sexo2" value="masculino">
+            <label for="sexo2">Masculino</label>
+            <br>
+            <label>Descrição</label>
+            <textarea placeholder="Observações" name="desc" id="descPet" cols="30" rows="10"></textarea>
+            
+        </form>
+        <button type="submit" onclick="cadastro()">Cadastrar</button>
+    </main>
+    <p id="mostrar"></p>
+    <script src="script.js"></script>
 </body>
-<script>
-    var h = 0;
-    var m = 0;
-    var s = 1;
-    var time = null;
-    function starta(){
-        if(!time){
-            time = setInterval(()=>{
-                if(s == 60){
-                    m++; s=0;
-                }
-                if (m == 60) 
-                { 
-                    h++; s = 0; m = 0;
-                }
-                if(h < 10)
-                {
-                    document.getElementById('hr').innerHTML = '0' + h + ':'}
-                else
-                {
-                    document.getElementById("hr").innerHTML = h + ":";
-                }
-                if (s < 10)
-                {
-                    document.getElementById("sec").innerHTML = "0" + s;
-                }  
-                else
-                {
-                document.getElementById("sec").innerHTML = s ;
-                }
-                if (m < 10)
-                {
-                    document.getElementById("min").innerHTML = "0" + m + ":";  
-                }  
-                else
-                { 
-                    document.getElementById("min").innerHTML = m + ":";
-                }	
-                s++
-            },1000);
-        }
-    }
-
-    function stopa(){
-        clearInterval(time);
-        time = null;
-
-    }
-    function teste(){
-            h = 0;
-            m = 0;
-            s = 1;
-            document.getElementById('hr').innerHTML = h + ':';
-            document.getElementById('min').innerHTML = m + ':';
-            document.getElementById('sec').innerHTML = s;
-        }
-    function reseta(){
-        
-        var myTimer = setInterval(teste(),3000);
-        clearInterval(myTimer);
-        myTimer =setInterval(teste(),3000); 
-
-    }
-</script>
 </html>
