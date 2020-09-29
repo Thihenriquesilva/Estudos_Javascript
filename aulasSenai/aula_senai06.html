@@ -19,9 +19,7 @@
     <input type="button" id="colocaBorda" value="Coloca borda" onclick="colocaBorder()"/>
     <input type="button" id="corBorda" value="Muda a cor da borda" onclick="corBorder()"/>
     <br><br>
-    <input type="button" id="tiraBorda" value="Exclui borda" onclick="excluiBorder()"/>
-    <input type="button" id="escode" value="Esconde a div" onclick="escondeDiv()"/>
-    <input type="button" id="achou" value="Reaparece com a div" onclick="reapareceDiv()"/>
+    <input type="button" id="esconde" value="Esconde a div" onclick="escondeDiv()"/>
 
     <script>
         // function mudaCor() {
@@ -94,33 +92,56 @@
             }
             else{
                 document.getElementById('manipula').style.fontStyle = 'normal';
-                document.getElementById('pizza').value = 'Deixar em italico'
+                document.getElementById('pizza').value = 'Deixar em italico';
                 trocaQuatro = false;
                 return trocaQuatro;
             }
         }
 
-        function escondeDiv() {
-        document.getElementById("manipula").style.display = "none";
+        // function escondeDiv() {
+        // document.getElementById("manipula").style.display = "none";
+        // }
+
+        var trocaCinco;
+        function escondeDiv(){
+            if(!trocaCinco){
+                document.getElementById('manipula').style.display = 'none';
+                document.getElementById('manipula').style.transition = '1s';
+                document.getElementById('esconde').value = 'Reaparece com a div';
+                trocaCinco = true;
+                return trocaCinco;
+            }else{
+                document.getElementById('manipula').style.display = 'block';
+                document.getElementById('esconde').value = 'Esconde a div';
+                trocaCinco = false;
+                return trocaCinco
+            }
         }
         
-        function reapareceDiv() {
-        document.getElementById("manipula").style.display = "block";
-        }
 
         
-        function colocaBorder() {
-        document.getElementById("manipula").style.border = "4px solid #22a6b3";
+        // function colocaBorder() {
+        // document.getElementById("manipula").style.border = "4px solid #22a6b3";
+        // }
+        var trocaSeis;
+        function colocaBorder(){
+            if(!trocaSeis){
+                document.getElementById('manipula').style.border = '4px solid #22a6b3';
+                document.getElementById('colocaBorda').value = 'Exclui borda';
+                trocaSeis = true;
+                return trocaSeis;
+            }else{
+                document.getElementById('manipula').style.border = '0px';
+                document.getElementById('colocaBorda').value = 'Colocar borda';
+                trocaSeis = false;
+                return trocaSeis;
+            }
         }
 
         function corBorder() {
             const colors = ['#1979e6','#b85647','#a8c33c','#3500ff','#dbc124']
             const cor = colors[Math.floor(Math.random() * colors.length)];
             document.getElementById("manipula").style.borderColor = cor;
-        }
-
-        function excluiBorder() {
-        document.getElementById("manipula").style.border = "0px";
         }
     </script>
 </body>

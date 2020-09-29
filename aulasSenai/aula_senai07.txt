@@ -1,0 +1,14 @@
+foreach = usado somente para arrays
+
+callbacks
+
+foreach();
+map();
+filter();
+find();
+
+arrow functions
+https://medium.com/@raphalima8/arrow-functions-declara%C3%A7%C3%A3o-funcionamento-escopos-e-o-valor-de-this-9cb6449bca31
+/*************************/
+
+projetin procurar nomes que possuam  o mesmo número de caracteres
