@@ -1,0 +1,48 @@
+Bibliotecas: 
+	Ajudam na padronização;
+	Sua é base é web-components;
+
+Typescript:
+	É o que o js deveria ter a muito tempo;
+
+	tsx: 
+	   Usam typescript;
+O que é webpack:
+
+
+React:
+	Uma biblioteca 
+	Ferramenta para criar interfaces visuais;
+	Possui a Virtual-DOM(cria uma cópia e trabalha nesta cópia)> performance;
+        Não altera a DOM original, é feita na Virtual;
+        Quando estiver feito ele joga pra DOM original;
+Componentes: 
+	Estruturas reutilizaveis, podem ser repetidas;
+	
+Propriedades(props):
+	Alterar a propriedade de um componente existente;
+
+States:
+    Mudar o estado do componente;
+
+
+JSX:    
+    Não é interpretado pelo browser(por isso existe o 'Transpiler')
+    Simplicidade
+    Escrevemos estruturas HTML
+
+Babel:
+    Transpiler: converte o código para versões +antigas do browser;
+    
+
+Rotas	
+	Precisamos criar rotas pois estamos trabalhando em servidor;
+	Rotas são os caminhos necessários para acessar os componentes;
+
+
+	comando:'yarn create react-app nome do projeto --template typescript';
+
+
+.root > App > Home
+
+nunca apagar a div(Pois ela é um elemento pai, através dela que importamos os dados(paginas))
