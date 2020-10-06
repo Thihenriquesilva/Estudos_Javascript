@@ -31,11 +31,11 @@
             if(inputCep){
                 const cep = inputCep.value;
                 if(cep.length === 8){
-                    const URL = `viacep.com.br/ws/${cep}/json/`;
+                    const URL = `http://viacep.com.br/ws/${cep}/json/`;
                     fetch(URL)
-                    .then(resposta => resposta.json())
-                    .then(data => data)
-                    .catch(erro => console.error(erro));
+                        .then(resposta => resposta.json())
+                        .then(data => mostrarResposta(data))
+                        .catch(erro => console.error(erro));
                 }
             }
         }
@@ -46,10 +46,10 @@
             Logradouro: ${cep.logradouro},
             Complemento: ${cep.complemento},
             Bairro: ${cep.bairro},
-            Cidade:${cep.cidade},
-            Estado:${cep.estado}`;
+            Cidade:${cep.localidade},
+            Estado:${cep.uf}`;
 
-            document.getElementById('mensagem').innerHTML = mensagem;
+             alert(mensagem);
         };
 
     </script>

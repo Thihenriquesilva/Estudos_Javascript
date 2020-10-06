@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #numbers{
+            margin-left: 8%;
+            margin-top: 6%;
+            padding: 4px;
+        }
+
+        #quadrado{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo</h1>
+    
+    <select name="numbers" id="numbers" onchange="selecionar()">
+        <option value="selecione" selected>Selecione</option>
+        <option value="black">Black</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+    </select>
+
+    <div id="quadrado">
+
+    </div>
+
+    <script src="scriptTestando.js"></script>
+</body>
+</html>
