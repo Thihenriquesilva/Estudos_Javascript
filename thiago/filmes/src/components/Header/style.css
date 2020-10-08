@@ -6,25 +6,28 @@
 }
 
 nav{
-    width:  1024px;
-    margin: auto;
-}
-
-nav {
-    width: 85vw;
-    height:180px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-nav ul {
+.menu{
+    list-style: none;
     display: flex;
-    list-style-type: none;
-    width: 45vh;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 300px;
 }
 
-nav ul > li > a {
-    font-size: 18px;
+.menu .link{
+    text-decoration: none;
+    color: #4b2142;
+    font-weight: bold;
+}
+
+.align{
+    width: 1024px;
+    margin: auto;
+}
+
+.align h3{
+    padding-top: 30px;
 }

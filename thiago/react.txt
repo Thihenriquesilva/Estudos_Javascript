@@ -56,3 +56,9 @@ boas praticas
 
 nomes maiúsculos: Componentes;
 nomes minúsculos: variaveis;
+
+
+Props 
+	elementos que mudam dentro de um componente
+	Propriedades customizadas
+	Obrigatórias e não obrigatórias

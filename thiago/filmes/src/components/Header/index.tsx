@@ -3,19 +3,30 @@ import '../../assets/style/global.css';
 import '../../assets/style/normalize.css';
 import '../Header/style.css';
 import logo from '../../assets/images/logo.png';
+import {Link} from 'react-router-dom';
 
-function Header(){
+// {/**contrato */}
+interface HeaderProps{
+  description: string;
+}
+// {/* React.FunctionComponent ou FCC*/}
+const Header: React.FunctionComponent<HeaderProps> =(props) => {
   return (
     <div className="principal">
        <div className="header">
-        <nav>
-          <img src={logo} alt="Logo"/>
-          <ul>
-                <li ><a>Perfil</a></li>
-                <li ><a>Filmes</a></li>
-                <li ><a>Gêneros</a></li>
+         <div className="align">
+          <nav>
+            {/* Links trabalham com o roteamento de caminhos  */}
+            {/* Toda vez que eu clicar na logo volte para HOME(/) */}
+            <Link to="/"><img src={logo} alt="Logo da Coletanea"/></Link>
+            <ul className="menu">
+                <li><Link to="/" className="link">Home</Link></li>
+                <li><Link to="/login" className="link">Login</Link></li>
+                <li><Link to="/cadastro" className="link">Cadastro</Link></li>
             </ul>
-        </nav>
+          </nav>
+          <h3>{props.description}</h3>
+         </div>
        </div>
     </div>
   );
