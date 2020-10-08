@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*retira o padding padrão dos elementos*/
+    box-sizing: border-box;
+}
+
+.centro{
+    width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}

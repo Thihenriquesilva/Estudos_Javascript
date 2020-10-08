@@ -1,0 +1,30 @@
+.header{
+    background-color: aliceblue;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #F6511D;
+}
+
+nav{
+    width:  1024px;
+    margin: auto;
+}
+
+nav {
+    width: 85vw;
+    height:180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    width: 45vh;
+    justify-content: space-around;
+}
+
+nav ul > li > a {
+    font-size: 18px;
+}

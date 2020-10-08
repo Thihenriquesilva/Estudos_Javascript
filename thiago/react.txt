@@ -38,11 +38,21 @@ Babel:
 Rotas	
 	Precisamos criar rotas pois estamos trabalhando em servidor;
 	Rotas são os caminhos necessários para acessar os componentes;
-
+	Tambem são visiveis como componentes
 
 	comando:'yarn create react-app nome do projeto --template typescript';
+			yarn add react-router-dom
 
+			se estiver trabalhando com typescript instale tambem este
+			yarn add @typs/react-router-dom -D
 
 .root > App > Home
 
 nunca apagar a div(Pois ela é um elemento pai, através dela que importamos os dados(paginas))
+
+
+
+boas praticas 
+
+nomes maiúsculos: Componentes;
+nomes minúsculos: variaveis;

@@ -75,6 +75,21 @@
     //     }
     // }
 
+
+    //Funções****************************************************
+
+    function fatorial(n){
+        if((n == 0)||(n==1))
+            return 1;
+        else    
+            return (n*fatorial(n-1));
+    }
+    var a,b,c;
+
+    a = fatorial(1);
+    b = fatorial(2);
+    c = fatorial(3);
+    
     function minhaFuncao(objeto)
     {
         objeto.make = "Toyota";
