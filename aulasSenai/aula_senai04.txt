@@ -1,3 +1,0 @@
-DOM (Document Object Model)
-
-Árvore DOM(Bem parecido com uma árvore genealogica)

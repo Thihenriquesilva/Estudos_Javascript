@@ -14,3 +14,18 @@ body{
     justify-content: center;
     align-items: center;
 }
+.div-inputs{
+    margin: 2% auto;
+}
+
+.div-inputs input{
+    width: 380px;
+    height: 34px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.div-inputs label{
+    font-size: 20px;
+    line-height: 23.44px;
+}

@@ -1,8 +1,9 @@
 function exibirMensagem() {
+    let escopoBloco 
     if(true)
     {
         var escopoFuncao = 'Caelum'
-        let escopoBloco = 'Alura' //funciona apenas dentro deste bloco de código
+        escopoBloco = 'Alura' //funciona apenas dentro deste bloco de código
 
         console.log(escopoBloco)
     }

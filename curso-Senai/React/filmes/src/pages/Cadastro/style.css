@@ -1,0 +1,20 @@
+.cadastro{
+    margin: 4vh 0;
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title{
+    font-size: 24px;
+    line-height: 28.13px;
+}
+
+select{
+    width: 380px;
+    height: 34px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
