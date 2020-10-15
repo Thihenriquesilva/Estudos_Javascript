@@ -6,11 +6,9 @@ interface ButtonProps {
   value: string;
 }
 
-const Button: React.FunctionComponent<ButtonProps> = (props) => {
+const Button: React.FunctionComponent<ButtonProps> = ({value}) => {
   return (
-    <div className="button">
-        <button>{props.value}</button>
-    </div>
+      <input className="button" type="submit" value={value}/>
   );
 }
 

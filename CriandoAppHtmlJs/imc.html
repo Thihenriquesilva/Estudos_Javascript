@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var pulaLinha = function(){
+         document.write("<br>")
+         document.write("<br>")
+     }
+
+     function mostra(frase){
+         document.write(frase)
+         pulaLinha()
+     }
+
+     function calculaIMC(altura, peso){
+        var imc = peso/(altura*altura)
+        return imc
+     }
+
+
+     var nome = prompt("Olá qual o seu nome?")
+     var peso = prompt(nome + ", qual o seu peso?")
+     var altura = prompt(nome + ", e qual a sua altura?")
+     var imc = Math.round(calculaIMC(altura,peso))
+     mostra(nome + " seu IMC é " + imc)
+     mostra("Ainda estou " + (imc -18.5) + " pontos acima do limite " + "e estou a " + (35 - imc) + " da obesidade mórbida")
+    alert(imc)
+
+    </script>
+</body>
+</html>

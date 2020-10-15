@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<style>
+    h3{
+        text-align: center;
+    }
+    p{
+        text-align: left;
+        font-size: 12pt;
+    }
+    
+</style>
+
+<h3>Álcool ou Gasolina?</h3>
+<script>
+    var tanque = 40;
+    var caminhoComGasolina = 480;
+    var caminhoComAlcool = 300;
+    var consumoDeGasolina = caminhoComGasolina/tanque;
+    var consumoDeAlcool = caminhoComAlcool/tanque
+    document.write("<p>Consumo com Gasolina:"+consumoDeGasolina+"</p>")
+    document.write("<p>Consumo com Alcool:"+Math.round(consumoDeAlcool)+"</p>");
+</script>
+
+<h3>Preço do Km Gasolina/Alcool</h3>
+<script>
+    var precoDaGasolina = 2.90;
+    var precoDoAlcool = 2.40;
+    var precoPorQuilometroGasolina = 2.90/tanque;
+    var precoPorQuilometroAlcool = 2.40/tanque;
+    document.write("<p>Preço por KM da Gasolina " +precoPorQuilometroGasolina+"</p>"); 
+    document.write("<p>Preço por KM do Álcool " +precoPorQuilometroAlcool+"</p>"); 
+</script>
