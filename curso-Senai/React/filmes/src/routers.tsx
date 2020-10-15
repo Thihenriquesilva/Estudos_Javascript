@@ -7,6 +7,8 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
+import Perfil from './pages/Perfil';
+import Genero from './pages/Genero';
 
 //criando as rotas
 function Routers(){
@@ -15,6 +17,8 @@ function Routers(){
             <Route path="/" exact component={Home}/>
             <Route path="/login" component={Login}/>
             <Route path="/cadastro" component={Cadastro}/>
+            <Route path="/perfil" component={Perfil}/>
+            <Route path="/genero" component={Genero}/>
         </BrowserRouter>
     );
 }

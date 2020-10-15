@@ -30,6 +30,7 @@ function Login() {
     .then(response => response.json())
     .then(dados =>{
         if(dados.token !== undefined){
+          
           localStorage.setItem('token-filmes',dados.token);
           alert("Login realizado com sucesso!");
           history.push('/');
@@ -50,7 +51,7 @@ function Login() {
              <form onSubmit={event=>{event.preventDefault(); login(); }}>
              <div className="div-inputs">
                 <Input name="email" label="E-mail" onChange={e=>setEmail(e.target.value)}/>
-                <Input name="senha" label="Senha" onChange={e=>setSenha(e.target.value)}/>
+                <Input name="senha" label="Senha" onChange={e=>setSenha(e.target.value)} type="password"/>
              </div>
              <Button value="Enviar"/>
              </form>
