@@ -6,7 +6,9 @@ GO
 SELECT * FROM Generos;
 
 -- Lista todos os filmes
-SELECT * FROM Filmes;
+SELECT IdFilme, Titulo, Nome FROM Filmes 
+INNER JOIN Generos
+ON Filmes.IdGenero = Generos.IdGenero;
 
 -- Lista todos os gêneros definindo as colunas exibidas
 SELECT IdGenero, Nome from Generos;

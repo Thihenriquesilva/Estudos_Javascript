@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
 import Perfil from './pages/Perfil';
 import Genero from './pages/Genero';
+import Filme from './pages/Filme';
 
 //criando as rotas
 function Routers(){
@@ -19,6 +20,7 @@ function Routers(){
             <Route path="/cadastro" component={Cadastro}/>
             <Route path="/perfil" component={Perfil}/>
             <Route path="/genero" component={Genero}/>
+            <Route path="/filme" component={Filme}/>
         </BrowserRouter>
     );
 }

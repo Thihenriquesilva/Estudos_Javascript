@@ -21,6 +21,7 @@ function Login() {
 
     fetch('http://localhost:5000/api/login',{
       method: 'POST',
+      //stringify(): converte os dados para string
       body: JSON.stringify(login),
       headers:{
         'content-type':'application/json'

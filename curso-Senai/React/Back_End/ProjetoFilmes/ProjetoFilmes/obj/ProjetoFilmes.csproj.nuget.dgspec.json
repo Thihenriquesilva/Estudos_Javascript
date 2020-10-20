@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\47490086809\\Desktop\\Estudos_Javascript\\curso-Senai\\React\\Back_End\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj": {}
+    "C:\\Users\\thi_s\\Desktop\\Estudos_Javascript\\curso-Senai\\React\\Back_End\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\47490086809\\Desktop\\Estudos_Javascript\\curso-Senai\\React\\Back_End\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj": {
+    "C:\\Users\\thi_s\\Desktop\\Estudos_Javascript\\curso-Senai\\React\\Back_End\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\47490086809\\Desktop\\Estudos_Javascript\\curso-Senai\\React\\Back_End\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
+        "projectUniqueName": "C:\\Users\\thi_s\\Desktop\\Estudos_Javascript\\curso-Senai\\React\\Back_End\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
         "projectName": "ProjetoFilmes",
-        "projectPath": "C:\\Users\\47490086809\\Desktop\\Estudos_Javascript\\curso-Senai\\React\\Back_End\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
-        "packagesPath": "C:\\Users\\47490086809\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\47490086809\\Desktop\\Estudos_Javascript\\curso-Senai\\React\\Back_End\\ProjetoFilmes\\ProjetoFilmes\\obj\\",
+        "projectPath": "C:\\Users\\thi_s\\Desktop\\Estudos_Javascript\\curso-Senai\\React\\Back_End\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
+        "packagesPath": "C:\\Users\\thi_s\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thi_s\\Desktop\\Estudos_Javascript\\curso-Senai\\React\\Back_End\\ProjetoFilmes\\ProjetoFilmes\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\47490086809\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\thi_s\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
@@ -96,7 +100,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 
-import mascaras from '../../assets/images/theater.png';
+import carretel from '../../assets/images/cinema.png';
 import atualizar from '../../assets/images/refresh.png';
 import lixeira from '../../assets/images/trash.png';
 import '../../assets/style/global.css'
@@ -12,17 +12,25 @@ import './style.css'
 import { report } from 'process';
 import { isTemplateExpression } from 'typescript';
 
-function Genero() {
+function Filme() {
+  const [filme, setFilme] = useState('');
+  const [idFilme, setIdFilme] = useState(0);
+  const [filmes, setFilmes] = useState([]);
+
   const [genero, setGenero] = useState('');
   const [idGenero, setIdGenero] = useState(0);
   const [generos, setGeneros] = useState([]);
+
+//   const [genero, setGenero] = useState('');
+//   const [idGenero, setIdGenero] = useState(0);
+//   const [generos, setGeneros] = useState([]);
 
   useEffect(() => {
     listar();
   }, []);
 
   const listar = () => {
-    fetch('http://localhost:5000/api/generos', {
+    fetch('http://localhost:5000/api/filmes', {
       method: 'GET',
       headers: {
         authorization: 'Bearer' + localStorage.getItem('token-filmes')
@@ -30,14 +38,27 @@ function Genero() {
     })
       .then(response => response.json())
       .then(dados => {
-        setGeneros(dados);
+        setFilmes(dados);
       })
       .catch(err => console.error(err));
   }
 
+  const listarGenero = ()=>{
+      fetch('http://localhost:5000/api/generos',{
+          method :'GET',
+          headers:{
+              authorization: 'Bearer' + localStorage.getItem('token-filmes')
+          }
+      })
+      .then(response => response.json())
+      .then(dados => {
+        setGeneros(dados);
+      })
+      .catch(err => console.error(err));
+  }
   const trash = (id: number) => {
     if (window.confirm('Deseja excluir o Gênero?')) {
-      fetch('http://localhost:5000/api/generos/' + id, {
+      fetch('http://localhost:5000/api/filmes/' + id, {
         method: 'DELETE',
         headers: {
           authorization: 'Bearer' + localStorage.getItem('token-filmes')
@@ -52,7 +73,7 @@ function Genero() {
 
   const refresh = (id: number) => {
 
-    fetch('http://localhost:5000/api/generos/' + id,{
+    fetch('http://localhost:5000/api/filmes/' + id,{
       method: 'GET',
       headers: {
         authorization: 'Bearer' + localStorage.getItem('token-filmes')
@@ -61,19 +82,19 @@ function Genero() {
       .then(response => response.json())
       .then(dados => {
         
-        setIdGenero(dados.idGenero);
-        setGenero(dados.nome);
+        setIdFilme(dados.idFilme);
+        setFilme(dados.titulo);
       })
       .catch(err => console.error(err))
   }
 
   const salvar = () => {
     const form = {
-      nome: genero
+      nome: filme
     };
 
-    const method = (idGenero === 0 ? 'POST' : 'PUT');
-    const urlRequest = (idGenero === 0 ? 'http://localhost:5000/api/generos' : 'http://localhost:5000/api/generos/' + idGenero);
+    const method = (idFilme === 0 ? 'POST' : 'PUT');
+    const urlRequest = (idFilme === 0 ? 'http://localhost:5000/api/filmes' : 'http://localhost:5000/api/filmes/' + idFilme);
     fetch(urlRequest, {
       method: method,
       body: JSON.stringify(form),
@@ -82,9 +103,9 @@ function Genero() {
       }
     })
       .then(() => {
-        alert('Gênero cadastrado');
-        setIdGenero(0);
-        setGenero('');
+        alert('Filme cadastrado');
+        setIdFilme(0);
+        setFilme('');
         listar();
       })
       .catch(err => console.error(err));
@@ -93,25 +114,26 @@ function Genero() {
 
   return (
     <div className="Genero">
-      <Header description="Cadastre os Generos dos filmes" />
+      <Header description="Cadastre os Filmes de sua preferência" />
       <div className="centro">
         <div className="genero">
 
-          <h1>Gêneros</h1>
+          <h1>Filmes</h1>
           <div className="div-image">
-            <img src={mascaras} alt="máscaras" />
+            <img src={carretel} alt="máscaras" />
           </div>
           <section>
-            <h2>Lista de Gêneros</h2>
+            <h2>Lista de Filmes</h2>
             <table>
               <tbody id="tbody">
                 
-                {generos.map((item:any) =>
-                  <tr key={item.idGenero}>
-                    <td>{item.nome}</td>
+                {filmes.map((item:any) =>
+                  <tr key={item.idFilme}>
+                    <td>{item.titulo}</td>
+                    <td>{item.idGeneroNavigation.nome}</td>
                     <td>
-                      <img src={atualizar} onClick={() => refresh(item.idGenero)} alt="atualizar"/>
-                      <img src={lixeira} onClick={() => trash(item.idGenero)} alt="deletar"/>
+                      <img src={atualizar} onClick={() => refresh(item.idFilme)} alt="atualizar"/>
+                      <img src={lixeira} onClick={() => trash(item.idFilme)} alt="deletar"/>
                       </td>
                   </tr>
                   
@@ -141,8 +163,16 @@ function Genero() {
               salvar();
             }}>
               <div className="div-input">
-                <Input id="gen"name="genero" label="Cadastrar gênero" value={genero} onChange={e => setGenero(e.target.value)} />
+                <Input name="filme" label="Cadastrar filme" value={filme} onChange={e => setFilme(e.target.value)} />
               </div>
+              <select className="selectGenero" onClick={() => listarGenero()} name="genero" onChange={e => setGenero(e.target.value)} value={filme}>
+                            <option value="0">Gênero</option>
+                            {
+                                generos.map((item: any) => {
+                                    return <option value={item.idGenero}>{item.nome}</option>
+                                })
+                            }
+                </select>
               <div id="div-btn">
                   {/* <Input name="genero" label="Cadastrar genero" value={genero} onChange={e => setGenero(e.target.value)} /> */}
                   <div className="btn">
@@ -158,4 +188,4 @@ function Genero() {
   );
 }
 
-export default Genero;
+export default Filme;
